@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eSoft Solutions</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="page-container">
+        <header class="site-header">
+            <img src="{{ url_for('static', filename='esoft_logo.jpg') }}" 
+                 alt="eSoft Solutions Logo">
+            <h1>Welcome to eSoft Solutions</h1>
+        </header>
+
+        <div class="services-container">
+            <div class="services-left">
+                <h2 class="section-title">Services Offered:</h2>
+                <ul>
+                    <li>Hardware and Software Installations</li>
+                    <li>ICT Consultation</li>
+                    <li>Database Management</li>
+                    <li>Graphics Design</li>
+                    <li>App Development</li>
+					<li>Website Design</li>
+                    <li>Computer Servicing & Maintenance</li>
+                    <li>General Printing</li>
+                    <li>Student Resources</li>
+                    <li>ICT Infrastructure</li>
+					<li>Student Resources</li>
+                </ul>
+            </div>
+            <div class="online-docs-right">
+                <h2 class="section-title">Online Document Processing:</h2>
+                <ul>
+                    <li>Passport Applications</li>
+                    <li>Visa Applications</li>
+                    <li>NIRA ID Application & Renewal</li>
+                    <li>URSB Registration</li>
+                    <li>Job Applications</li>
+                    <li>URA TIN Applications & Tax Assessment</li>
+                    <li>DV Lottery Application</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="contact-section">
+            <h2 class="section-title">Contact Us:</h2>
+            <p><i>Phone: +256 703222589, +256 782466648</i></p>
+            <p><i>Email: esoft.slns@gmail.com</i></p>
+
+            <h2 class="section-title">Get in Touch:</h2>
+            <form action="/contact" method="post" class="contact-form">
+                <input type="text" id="name" name="name" placeholder="Name" required>
+                <input type="email" id="email" name="email" placeholder="Email" required>
+                <textarea id="message" name="message" placeholder="Message" required></textarea>
+                <input type="submit" value="Send Message">
+            </form>
+
+            {% if msg %}
+            <p class="form-msg">{{ msg }}</p>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>
