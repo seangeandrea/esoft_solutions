@@ -1,5 +1,5 @@
-DB_NAME=esoft_db
-DB_USER=postgres
-DB_PASS=sasa123
+DB_NAME=
+DB_USER=
+DB_PASS=
 DB_HOST=localhost
-DB_PORT=5477
+DB_PORT=5432
